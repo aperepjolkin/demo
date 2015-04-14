@@ -1,0 +1,52 @@
+﻿@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+  <div class="CSSTableGenerator" ng-controller="BankRatesCtrl">
+      <p>{{Operation}}</p>
+       <input type="button" value="Add" ng-click="add()" />
+        <table>
+            <tbody>
+                <tr>
+                    <td>ID</td>
+                    <td>Service</td>
+                    <td>Price</td>
+                </tr>
+                <tr ng-repeat="rate in rates">
+                    <td>
+                        <div ng-hide="editingData[rate.RateID]">{{rate.RateID | uppercase}}</div>
+                        <div ng-show="editingData[rate.RateID]" ng-model="rate.RateID">{{rate.RateID | uppercase}}</div>
+                    </td>
+                    <td>
+                        <div ng-hide="editingData[rate.RateID]">{{rate.Name | uppercase}}</div>
+                        <div ng-show="editingData[rate.RateID]"><input type="text" ng-model="rate.Name" /></div>
+                    </td>
+                    <td>
+                        <div ng-hide="editingData[rate.RateID]">{{rate.Value}}</div>
+                        <div ng-show="editingData[rate.RateID]"><input type="text" ng-model="rate.Value" /></div>
+                    </td>
+                    <td>
+                        <button ng-hide="editingData[rate.RateID]" ng-click="edit(rate)">Edit</button>
+                        <button ng-show="editingData[rate.RateID]" ng-click="save(rate)">Save</button>
+                        <button ng-show="editingData[rate.RateID]" ng-click="delete(rate)">Remove</button>
+                    </td>
+                </tr>
+                <tr ng-show="addNew">
+                    <td>
+                        <input type="text" style="width:20px;" disabled="disabled" ng-model="RateID" />
+                    </td>
+                    <td>
+                        <input type="text" style="width:94px;" ng-model="rate.Name" />
+                    </td>
+
+
+                    <td>
+                        <input type="text" style="width:94px;" ng-model="rate.Value" />
+                    </td>
+
+                    <td colspan="2">
+                        <input type="button" value="Add new" ng-click="save(rate)" />
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
