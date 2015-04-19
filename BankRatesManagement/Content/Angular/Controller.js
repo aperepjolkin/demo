@@ -47,7 +47,6 @@
         var Operation = $scope.Operation;
 
         if (Operation == "Update") {
-            alert('dd');
             var getMSG = angularService.update(Rate);
             getMSG.then(function (messagefromController) {
                 GetAllRates();
