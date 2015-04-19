@@ -10,21 +10,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BankRatesManagement.Domain", "BankRatesManagement.Domain\BankRatesManagement.Domain.csproj", "{532E96F1-BF72-4078-9FB3-5717314016E8}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 4
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://easyflow.visualstudio.com/defaultcollection
-		SccLocalPath0 = .
-		SccProjectUniqueName1 = BankRatesManagement.Tests\\BankRatesManagement.Tests.csproj
-		SccProjectName1 = BankRatesManagement.Tests
-		SccLocalPath1 = BankRatesManagement.Tests
-		SccProjectUniqueName2 = BankRatesManagement\\BankRatesManagement.csproj
-		SccProjectName2 = BankRatesManagement
-		SccLocalPath2 = BankRatesManagement
-		SccProjectUniqueName3 = BankRatesManagement.Domain\\BankRatesManagement.Domain.csproj
-		SccProjectName3 = BankRatesManagement.Domain
-		SccLocalPath3 = BankRatesManagement.Domain
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
